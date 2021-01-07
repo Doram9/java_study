@@ -1,0 +1,20 @@
+package tutorial8;
+
+public class max {
+	
+	public static int max(int a, int b)
+	{
+		return (a > b ? a : b);
+	}
+	public static int function(int a, int b, int c)
+	{
+		int result = max(a, b);
+		result = max(result, c);
+		return result;
+	}
+	public static void main(String[] args) {
+		int x = 345, y = 456, z = 678;
+		System.out.println(x + ", " + y + ", " + z + "중에서 가장 큰 숫자는 " + function(x, y, z) + "이다.");
+	}
+
+}
