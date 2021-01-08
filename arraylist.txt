@@ -1,0 +1,20 @@
+package tutorial14;
+
+import java.util.Scanner;
+
+public class makepizza {
+
+	public static void main(String[] args) {
+		String[] dataList = {"apple", "banana", "mango", "grape"};
+		ArrayList<String> arrayList = new ArrayList<>();
+		for(String data : dataList) {
+			if(!arrayList.contains(data))
+				arrayList.add(data)
+		}
+		
+		
+		
+
+	}
+
+}
