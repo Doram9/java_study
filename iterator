@@ -1,0 +1,19 @@
+package hashmap;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+
+public class main {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		for( Iterator<Integer> itr = list.iterator(); itr.hasNext(); )//iterator를 활용해서 list의 모든 값을 가져온다.
+		{
+		list.get( itr.next() );
+		}
+	}
+	//iterator의 단점
+	//iterator는 자동으로 index를 관리해주기 때문에, 편리하나 객체를 만들어서 사용하기 때문에 느리다.
+	//list의 size를 받아와서 사용하는것이 더 좋다.
+}
