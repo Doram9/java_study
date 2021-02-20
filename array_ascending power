@@ -1,0 +1,40 @@
+import java.util.Arrays;
+
+public class Sort{
+    public static void main(String[] args)  {
+        int arr[] = {4,23,33,15,17,19};
+        Arrays.sort(arr); //오름차순 정렬
+        
+        for (int i : arr) {
+            System.out.print("["+i+"]");
+        }
+    }
+}
+
+//String타입 배열 오름차순 정렬
+import java.util.Arrays;
+
+public class Sort{
+    public static void main(String[] args)  {
+        String arr[] = {"apple","orange","banana","pear","peach","melon"};
+        Arrays.sort(arr);
+        
+        for (String i : arr) {
+            System.out.print("["+i+"]");
+        }
+    }
+}
+
+//내림차순 정렬
+import java.util.Arrays;
+
+public class Sort{
+    public static void main(String[] args)  {
+        Integer arr[] = {4,23,33,15,17,19};
+        Arrays.sort(arr,Collections.reverseOrder()); // Collections 클래스의 reverseOrder() 함수를 사용
+        
+        for (int i : arr) {
+            System.out.print("["+i+"]");
+        }
+    }
+}
