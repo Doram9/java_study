@@ -1,0 +1,49 @@
+Collection 인터페이스
+
+List와 Set의 조상인 Collection 인터페이스에서 제공하는 주요 메서드는 다음과 같다.
+
+
+
+ 메소드
+
+설명 
+
+ boolean add(Object o)
+
+ boolean addAll(Collection c)
+
+해당 컬렉션에 전달된 요소를 추가함 
+
+ void clear()
+
+해당 컬렉션의 모든 요소를 제거함 
+
+boolean contains(Object o)
+
+boolean containsAll(Collection c) 
+
+지정된 객체(o) 또는 컬렉션의 객체들이 컬렉션에 포함되어 있는지 확인함
+
+boolean equals(Object o) 
+
+동일한 컬렉션인지 비교함
+
+boolean isEmpty() 
+
+컬렉션이 비어있는지 확인함 
+
+Iterator<E> iterator() 
+
+해당 컬렉션의 반복자(iterator)를 반환함
+
+boolean remove(Object o) 
+
+ 지정된 객체를 삭제함 
+
+int size() 
+
+해당 컬렉션의 요소의 총 개수를 반환함
+
+Object[] toArray()
+
+해당 컬렉션의 모든 요소를 Object 타입의 배열로 반환함
