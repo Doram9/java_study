@@ -1,0 +1,12 @@
+interface Printable {
+  public abstarct void paper();
+  // Default Method : 실행 내용까지 있음
+  public default void setPrint(boolean color){
+    if(color){
+      System.out.println("컬러 출력");
+    }
+    else {
+      System.out.println("흑백 출력");
+    }
+  }
+}
