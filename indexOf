@@ -1,0 +1,4 @@
+String[] fruitsArray = {"apple", "banana", "apple", "mango"};
+ArrayList<String>  fruits = new ArrayList<>(Arrays.asList(fruitsArray));
+System.out.println("indexOf(apple) : " + fruits.indexOf("apple"));
+System.out.println("indexOf(kiwi) : " + fruits.indexOf("kiwi"));
