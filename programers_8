@@ -1,0 +1,16 @@
+class Solution {
+    public int[] solution(int[] answers) {
+        int[] answer = {};
+        int[] p1 = new int[answers.length];
+        while(i != answers.length) {
+            int i = 0;
+            p1[i] = (i % 5) + 1;
+            i++;
+            System.out.println(p1[i]);
+        }
+        for(int i = 0; i < answers.length; i++) {
+            
+        }
+        return answer;
+    }
+}
