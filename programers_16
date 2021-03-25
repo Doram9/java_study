@@ -1,0 +1,32 @@
+class Solution {
+    public int[] solution(int[] array, int[][] commands) {
+        int[] answer = new int[commands.length];
+        for(int i = 0; i < commands.length; i++) {
+            int fir = 0;
+            int sec = 0;
+            int thi = 0;
+            for(int j = 0; j < 3; j++) {
+                if(j == 0) fir = commands[i][j];
+                else if(j == 1) sec = commands[i][j];
+                else if(j == 2) thi = commands[i][j];
+            }
+            int[] cut = new int[sec - fir + 1];
+            for(int j = 0; j < cut.length; j++) {
+                cut[j] = array[fir - 1];
+                fir++;
+            }
+            for(int j = 0; j < cut.length; j++) {
+                for(int k = j; k < cut.length; k++) {
+                    if(j != k && cut[j] > cut[k]) {
+                        int temp = cut[k];
+                        cut[k] = cut[j];
+                        cut[j] = temp;
+                        k--;
+                    }
+                }
+            }
+            answer[i] = cut[thi - 1];
+        }
+        return answer;
+    }
+}
