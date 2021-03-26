@@ -1,0 +1,53 @@
+class Solution {
+    public String solution(int a, int b) {
+        String answer = "";
+        int sum = -1; //1일 빼야 원하는 결과 나옴
+        for(int i = 1; i < a; i++) {
+            switch(i) {
+                case 1: sum += 31;
+                    continue;
+                case 2: sum += 29;
+                    continue;
+                case 3: sum += 31;
+                    continue;
+                case 4: sum += 30;
+                    continue;
+                case 5: sum += 31;
+                    continue;
+                case 6: sum += 30;
+                    continue;
+                case 7: sum += 31;
+                    continue;
+                case 8: sum += 31;
+                    continue;
+                case 9: sum += 30;
+                    continue;
+                case 10: sum += 31;
+                    continue;
+                case 11: sum += 30;
+                    continue;
+            }
+        }
+        sum += b;
+        System.out.println(sum);
+        int day = sum % 7;
+        System.out.println(day);
+        switch(day) {
+            case 0: answer += "FRI";
+                break;
+            case 1: answer += "SAT";
+                break;
+            case 2: answer += "SUN";
+                break;
+            case 3: answer += "MON";
+                break;
+            case 4: answer += "TUE";
+                break;
+            case 5: answer += "WED";
+                break;
+            case 6: answer += "THU";
+                break;
+        }
+        return answer;
+    }
+}
