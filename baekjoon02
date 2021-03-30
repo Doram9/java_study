@@ -1,0 +1,27 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int[] nums = new int[sc.nextInt()];
+		for(int i = 0; i < nums.length; i++) {
+			nums[i] = sc.nextInt();
+		}
+		Arrays.sort(nums);
+		int a = nums[0];
+		for(int i = 2; i < nums[nums.length - 1]; i++) {
+			boolean tf = true;
+			int count = a % i;
+			for(int j = 1; j < nums.length; j++) {
+				if(nums[j] % i != count) {
+					tf = false;
+					break;
+				}
+			}
+				System.out.println(i);
+		}
+	}
+}
