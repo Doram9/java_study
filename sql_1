@@ -1,0 +1,6 @@
+select * from tab // 테이블 나타내는 명령어
+desc 테이블명 // 테이블 안에 있는 컬럼 조회
+number
+char
+varchar2
+date
