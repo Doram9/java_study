@@ -1,0 +1,20 @@
+
+public class study_1 {
+	public static int sosu(int number) {
+		int i;
+		for(i = 2; i < number; i++)
+			if(number % i == 0)
+				return 0;
+		System.out.println(number + "은 소수");
+		return 1;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int number = 100, cnt = 0; int i;
+		for(i = 2; i < number; i++) {
+			cnt += sosu(i);
+		}
+		System.out.printf("1 ~ %d 사이 소수는 %d개입니다.\n", number, cnt);
+	}
+	
+}
