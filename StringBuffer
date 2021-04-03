@@ -1,0 +1,81 @@
+StringBuffer는 문자열을 추가하거나 변경할 때 사용합니다.
+
+ 
+
+1. StringBuffer 의 사용법
+
+ 
+
+StringBuffer stringBuffer = new StringBuffer();
+
+stringBuffer .append("Hello");
+
+stringBuffer .append(" ");
+
+stringBuffer .append(World !);
+
+System.out.println(stringBuffer .toString());
+
+ 
+
+출력 : Hello World !
+
+ 
+
+2. StringBuffer 와 String 의 차이점
+
+ 
+
+위 1번의 코드와 결과만 보면 String 의 문자열 덧셈과 다른 점이 없어 보입니다.
+
+ 
+
+하지만 메모리 관리면에서 String의 문자열 덧셈 보다 StringBuffer가 더 효율적입니다.
+
+ 
+
+위 코드에서 StringBuffer 객체는 단 한번만 생성됩니다.
+
+ 
+
+반면에 String 자료형의 문자열 덧셈 + 연산은 연산이 이루어질 때 마다 새로운 String 객체가 생성됩니다.
+
+ 
+
+(코딩할 때 주의하세요)
+
+ 
+
+제가 처음으로 작성한 블로그 글이 mutable 과 immutable입니다. :3
+
+ 
+
+String 자료형은 한번 값이 생성되면 그 값을 절대 변경할 수 없습니다. (immutable)
+
+ 
+
+trim과 toUpperCase 등 메소드를 보면 문자열이 변경되는 것이 아니라 또 다른 String 객체를 생성합니다.
+
+ 
+
+StringBuffer는 값을 변경할 수 있습니다. (mutable)
+
+ 
+
+즉 StringBuffer 와 String은 상황에 맞게 사용해야 합니다.
+
+ 
+
+StringBuffer는 String 보다 무겁고 속도가 느립니다. (무겁다 : 메모리 사용량이 더 크다)
+
+ 
+
+3. 결론
+
+ 
+
+내가 문자열 추가 또는 변경 작업이 많을 경우는 StringBuffer를,
+
+ 
+
+내가 문자열 추가 또는 변경 작업이 적을 경우는 String을 사용하는게 좋다고 생각됩니다.
