@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+class Solution {
+    public int[] solution(int[] answers) {
+        int[] p1 = {1, 2, 3, 4, 5};
+        int[] p2 = {2, 1, 2, 3, 2, 4, 2, 5};
+        int[] p3 = {3, 3, 1, 1, 2, 2, 4, 4, 5, 5};
+        int p1co = 0;
+        int p2co = 0;
+        int p3co = 0;
+        for(int i = 0; i < answers.length; i++) {
+            int p1an = i % 5;
+            int p2an = i % 8;
+            int p3an = i % 10;
+            if(p1[p1an] == answers[i]) p1co++;
+            if(p2[p2an] == answers[i]) p2co++;
+            if(p3[p3an] == answers[i]) p3co++;
+        }
+        int max = Math.max(Math.max(p1co, p2co), p3co);
+        ArrayList <Integer> list = new ArrayList<Integer>();
+        if(max == p1co) list.add(1);
+        if(max == p2co) list.add(2);
+        if(max == p3co) list.add(3);
+        int[] answer = new int[list.size()];
+        for(int i =0; i < answer.length; i++) {
+        	answer[i] = list.get(i);
+        }
+        return answer;
+    }
+}
