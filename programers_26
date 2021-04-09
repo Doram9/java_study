@@ -1,0 +1,16 @@
+class Solution {
+    public String solution(String s) {
+        StringBuffer sb = new StringBuffer(s);
+        for(int i = 0; i < sb.length(); i++) {
+            for(int j = i; j < sb.length(); j++) {
+                if(sb.charAt(i) < sb.charAt(j)) {
+                    char tmp = sb.charAt(j);
+                    sb.replace(j, j + 1, Character.toString(sb.charAt(i)));
+                    sb.replace(i, i + 1, Character.toString(tmp));
+                }
+            }
+        }
+        String answer = sb.toString();
+        return answer;
+    }
+}
