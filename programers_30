@@ -1,0 +1,23 @@
+class Solution {
+    public long solution(long n) {
+        long answer = 0;
+        String Slong = Long.toString(n);
+        String SAL = "";
+        String[] Sanswer = new String[Slong.length()];
+        for(int i = 0; i < Slong.length(); i++) {
+            Sanswer[i] = Slong.substring(i, i + 1);
+        }
+        for(int i = 0; i < Sanswer.length; i++) {
+            for(int j = i; j < Sanswer.length; j++) {
+                if(Integer.parseInt(Sanswer[i]) < Integer.parseInt(Sanswer[j])) {
+                    String tmp = Sanswer[i];
+                    Sanswer[i] = Sanswer[j];
+                    Sanswer[j] = tmp;
+                }
+            }
+            SAL += Sanswer[i];
+        }
+        answer = Long.parseLong(SAL);
+        return answer;
+    }
+}
