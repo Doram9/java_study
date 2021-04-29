@@ -1,0 +1,14 @@
+class Solution {
+    public int solution(int n) {
+        int answer = 0;
+        int fb = 0;
+        int ff = 1;
+        for(int i = 2; i <= n; i++) {
+            answer = ff + fb;
+            answer %= 1234567;
+            fb = ff;
+            ff = answer;
+        }
+        return answer;
+    }
+}
