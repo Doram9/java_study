@@ -1,0 +1,36 @@
+import java.util.Arrays;
+class Solution {
+    public int solution(int[] nums) {
+        int i = 0;
+        int j = 1;
+        int k = 2;
+        int answer = 0;
+        Arrays.sort(nums);
+        while(i < nums.length - 2) {
+            int sum = nums[i] + nums[j] + nums[k];
+            boolean tf = true;
+            for(int l = 2; l < sum; l++) {
+                if(sum % l == 0) {
+                    tf = false;
+                    break;
+                }
+            }
+            if(tf) {
+                answer++;
+            }
+            if(k < nums.length - 1) k++;
+            else {
+                if(j < nums.length - 2) {
+                    j++;
+                    k = j + 1;
+                }
+                else {
+                    i++;
+                    j = i + 1;
+                    k = j + 1;
+                }
+            }
+        }
+        return answer;
+    }
+}
