@@ -1,0 +1,25 @@
+import java.util.*;
+class Solution
+{
+    public int solution(String s)
+    {
+        ArrayList<String> arr = new ArrayList<>();
+        for(int i = 0; i < s.length(); i++) {
+            arr.add(s.charAt(i) + "");
+        }
+        for(int i = 0; i < arr.size() - 1; i++) {
+            if(arr.get(i).equals(arr.get(i + 1))) {
+                arr.remove(i);
+                arr.remove(i);
+                if(i == 0) {
+                    i = -1;
+                }
+                else {
+                    i -= 2;
+                }
+            }
+        }
+        int answer = (arr.size() == 0) ? 1 : 0;
+        return answer;
+    }
+}
